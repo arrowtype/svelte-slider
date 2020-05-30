@@ -1,8 +1,13 @@
 <script>
-	import Slider from './Slider.svelte'
 
+	// import slider components
+	import Slider from './Slider.svelte'
+	import SimpleSlider from './SimpleSlider.svelte'
+
+	// set default slider values here
 	export let sliderValA = 0;
-	export let sliderValB = 15;
+	export let sliderValB = 10;
+	export let sliderValC = 0;
 </script>
 
 <main>
@@ -12,9 +17,17 @@
 	<Slider bind:value={sliderValA} min="0" max="10" step="1"/>
 
 	<p>Slider B value is {sliderValB}</p>
-	<Slider bind:value={sliderValB} min="0" max="30" step="5"/>
+	<Slider bind:value={sliderValB} min="0" max="20" step="5"/>
 
 	<p>A + B is {sliderValA + sliderValB}</p>
+
+	<h3>An even simpler slider</h3>
+
+	<p>Slider C value is {sliderValC}</p>
+	
+	<SimpleSlider bind:value={sliderValC} min="0" max="30" step="1"/>
+
+	<p>A + B + C is {sliderValA + sliderValB + sliderValC}</p>
 
 	<h2>Description</h2>
 
