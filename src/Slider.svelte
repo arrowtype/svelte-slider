@@ -5,10 +5,12 @@
     export let moreProps = {} // allows other props to be spread in, e.g. "step" or "disabled"
 </script>
 
+<!-- on:change on:input are need for "event forwarding" / handling in parent components -->
+
 <div class="slider-container">
-    <input type="number" bind:value {min} {max} {...moreProps}>
+    <input type="number" bind:value {min} {max} {...moreProps} on:change on:input>
     <span>{min}</span>
-    <input type="range" bind:value {min} {max} {...moreProps}>
+    <input type="range" bind:value {min} {max} {...moreProps} on:change on:input>
     <span>{max}</span>
 </div>
 
