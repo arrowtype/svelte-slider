@@ -1,93 +1,15 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Simple SvelteJS slider component
 
----
+To use SvelteJS, please see the [SvelteJS Documentation](https://svelte.dev/).
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now deploy --name my-project
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+<p>
+    This <code>Slider</code> component:
+</p>
+<ul>
+    <li>Has custom CSS which makes it easy to manipulate on a touch screen, while still looking simple & similar across platforms. This takes <a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">a lot of CSS</a> for a range input.</li>
+    <li>Is separate from the main app component, which is nice because it has custom CSS that only has to be written once. (It’s a component.)</li>
+    <li>Has props for value, min, & max.</li>
+    <li>Works just like a normal, plain-HTML range input does in Svelte. You can <a href="https://svelte.dev/tutorial/numeric-inputs">easily bind its value</a> to the state in the component it is used within.</li>
+</ul>
+<p>Note: this is intended more as a test & open example of how a Slider component can be made in SvelteJS. It is not necessarily representative of best practices or something that you should reuse without testing & improvement.</p>
+<p>Have an idea of how to improve it? Please file an issue or make a pull request in the GitHub Repo!</p>
